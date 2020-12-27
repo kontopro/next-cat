@@ -37,7 +37,7 @@ export const getStaticProps = async ({params}) => {
   const res = await fetch('https://raw.githubusercontent.com/kontopro/next-cat/main/data/master.json')
   const assemblies = await res.json()
   const assembly = assemblies.find(({id}) => id === params.assid)
-  const imag = assembly.menuItem.length?assembly.menuItem.map((part) => part.id === params.imgid):assembly.menuItem
+  const imag = assembly.menuItem.length?assembly.menuItem.find(({id}) => id === params.imgid):assembly.menuItem
 
   return {
     props:{
