@@ -2,23 +2,13 @@ import Link from 'next/link';
 
 function Imag({ imag }) {
 
-  const listItems = assembly.menuItem.length ? assembly.menuItem.map(item => <div key={item.id} className='card'>
-    <Link href={`${assembly.id}/${item.id}`}>
-      <a>{item.caption}</a>
-    </Link>
-  </div>
-  ) : <div className='card'><Link href={`${assembly.id}/${assembly.menuItem.id}`}>
-    <a>{assembly.menuItem.caption}</a>
-  </Link></div>;
+  
 
   return (
     <main>
 
-      <p>{assembly.caption}</p>
-      <p>Υποσυγκροτήματα: {assembly.menuItem.length ? assembly.menuItem.length : `1`}</p>
-      <div className='cards-wrapper'>
-        {listItems}
-      </div>
+      <p>{imag.name}</p>
+      
 
     </main>
   );
@@ -28,10 +18,13 @@ export const getStaticPaths = async () => {
 
   const res = await fetch('https://raw.githubusercontent.com/kontopro/next-cat/main/data/master.json')
   const assemblies = await res.json()
-//  console.log(assemblies)
-  const paths = assemblies.map((assembly) => {
-    return {params: { assid: assembly.id, imgid: assembly.menuItem.id.toString() },
-  }})
+  const paths = assemblies.map((assembly) => assembly.menuItem.length?assembly.menuItem.map((item) => (
+      { 
+          params: { assid: assembly.id, imgid: item.id } 
+    }
+    )
+    ):{params: { assid: assembly.id, imgid: assembly.menuItem.id}}
+).flat()
 
   return {
     paths,
@@ -44,10 +37,11 @@ export const getStaticProps = async ({params}) => {
   const res = await fetch('https://raw.githubusercontent.com/kontopro/next-cat/main/data/master.json')
   const assemblies = await res.json()
   const assembly = assemblies.find(({id}) => id === params.assid)
+  const imag = assembly.menuItem.length?assembly.menuItem.map((part) => part.id === params.imgid):assembly.menuItem
 
   return {
     props:{
-      assembly
+      imag
     }
   }
 }

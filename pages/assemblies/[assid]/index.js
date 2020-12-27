@@ -30,7 +30,7 @@ export const getStaticPaths = async () => {
   const assemblies = await res.json()
 
   const paths = assemblies.map((assembly) => ({
-    params: { assid: assembly.id }
+    params: { assid: assembly.id.toString() }
   }))
 
   return {
