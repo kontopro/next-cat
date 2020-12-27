@@ -1,6 +1,6 @@
 [
             {
-            "id": "100",
+            "id": 100,
             "caption": "ΣΥΓΚΡΟΤΗΜΑ ΚΙΝΗΤΗΡΑ",
             "icon": "gppart.jpg",
             "IsFolder": "true",
