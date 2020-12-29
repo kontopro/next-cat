@@ -1,14 +1,15 @@
 import Link from 'next/link';
 import Image from 'next/image';
-function Imag({ imag }) {
+import Listnsn from '../../../components/Listnsn'
 
-  
+function Imag({ imag }) {
 
   return (
     <main>
 
       <p>{imag.name}</p>
       <Image src={`/images/${imag.id}.jpg`} alt="me" width="500" height='500'  layout='intrinsic'/>
+      <Listnsn details={imag} />
       
 
     </main>
@@ -36,8 +37,11 @@ export const getStaticPaths = async () => {
 export const getStaticProps = async ({params}) => {
   
   const res = await fetch('https://raw.githubusercontent.com/kontopro/next-cat/main/data/master.json')
+  const res1 = await fetch('https://raw.githubusercontent.com/kontopro/next-cat/main/data/master.json')
   const assemblies = await res.json()
+  const details = await res1.json()
   const assembly = assemblies.find(({id}) => id === params.assid)
+  const detail = details.find(({id}) => id === params.assid)
   const imag = assembly.menuItem.length?assembly.menuItem.find(({id}) => id === params.imgid):assembly.menuItem
 
   return {
