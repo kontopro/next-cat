@@ -1,5 +1,5 @@
 import Link from 'next/link';
-
+import Image from 'next/image';
 function Imag({ imag }) {
 
   
@@ -8,6 +8,7 @@ function Imag({ imag }) {
     <main>
 
       <p>{imag.name}</p>
+      <Image src={`/images/${imag.id}.jpg`} alt="me" width="500" height='500' layout='fixed'/>
       
 
     </main>
