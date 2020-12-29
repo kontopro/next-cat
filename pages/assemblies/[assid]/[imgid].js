@@ -8,7 +8,7 @@ function Imag({ imag }) {
     <main>
 
       <p>{imag.name}</p>
-      <Image src={`/images/${imag.id}.jpg`} alt="me" width="500" height='500' layout='fixed'/>
+      <Image src={`/images/${imag.id}.jpg`} alt="me" width="500" height='500'  layout='intrinsic'/>
       
 
     </main>
