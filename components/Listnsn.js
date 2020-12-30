@@ -1,11 +1,5 @@
 
-async  () => {
 
-    const res =  await fetch('https://raw.githubusercontent.com/kontopro/next-cat/main/data/detail.json')
-    const ao =  await res.json()
-
-    return ao
-}
 
  function Listnsn({details}) {
 
@@ -16,7 +10,7 @@ async  () => {
     return (
         <div className='listnsn'>            
             <p>hello Listnsn</p>
-            <p>{details.id}</p>
+            <p>{details.length}</p>
             {/* <p>{nsn[1].AID}</p> */}
         </div>
     );
