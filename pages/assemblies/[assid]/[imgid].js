@@ -10,7 +10,6 @@ function Imag({ imag, nsns }) {
       <p>{imag.name}</p>
       <Image src={`/images/${imag.id}.jpg`} alt="me" width="500" height='500'  layout='intrinsic'/>
       <Listnsn details={nsns} />
-      
 
     </main>
   );
