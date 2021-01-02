@@ -3,11 +3,11 @@ import Link from 'next/link';
 function Assembly({ assembly }) {
 
   const listItems = assembly.menuItem.length ? assembly.menuItem.map(item => <div key={item.id} className='card'>
-    <Link href={`${assembly.id}/${item.id}`}>
+    <Link href={`/assemblies/${assembly.id}/${item.id}`}>
       <a>{item.caption}</a>
     </Link>
   </div>
-  ) : <div className='card'><Link href={`${assembly.id}/${assembly.menuItem.id}`}>
+  ) : <div className='card'><Link href={`/assemblies/${assembly.id}/${assembly.menuItem.id}`}>
     <a>{assembly.menuItem.caption}</a>
   </Link></div>;
 
