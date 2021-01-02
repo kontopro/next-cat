@@ -7,25 +7,25 @@ export const AithshProvider = ({ children }) => {
   
     const [aithsh, setAithsh] = useState([])
 
-    function handleAithsh(x,y){
+    function handleAithsh(x,y,z){
       y=='0'?
         removeAithsh(x):
-          aithsh.findIndex(({aid})=>aid===x)<0?
-            addAithsh(x,y):
-              updateAithsh(x,y)
+          aithsh.findIndex(({ao})=>ao===x)<0?
+            addAithsh(x,y,z):
+              updateAithsh(x,y,z)
     }
 
-    function updateAithsh(x,y){
-      const oldait = aithsh.filter(({aid})=>aid !== x)
-      setAithsh([...oldait,{aid:x,pos:y}])
+    function updateAithsh(x,y,z){
+      const oldait = aithsh.filter(({ao})=>ao !== x)
+      setAithsh([...oldait,{ao:x,pos:y, per:z}])
     }
 
-    function addAithsh(x,y){ 
-      setAithsh([...aithsh, {aid:x,pos:y}])
+    function addAithsh(x,y,z){ 
+      setAithsh([...aithsh, {ao:x,pos:y, per:z}])
     }
 
     function removeAithsh(x){
-      const oldait = aithsh.filter(({aid})=> aid !== x)
+      const oldait = aithsh.filter(({ao})=> ao !== x)
       setAithsh([...oldait])
     }
 

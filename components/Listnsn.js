@@ -3,12 +3,14 @@ import { useAithsh } from "./AithshState";
  function Listnsn({details}) {
 
     const {aithsh, handleAithsh} = useAithsh();
-    const handleChange = event => {
-        
+    
+    const handleChange = event => {        
      event.preventDefault();
-     handleAithsh(event.target.attributes.ao.value,event.target.value);
+     event.target.getAttribute('ao') === 'Ανευ Α/Ο'?handleAithsh(event.target.getAttribute('pn'),event.target.value,event.target.getAttribute('name')):handleAithsh(event.target.getAttribute('ao'),event.target.value,event.target.getAttribute('name'));
     }
+
     console.log(aithsh)
+
     return (
         <div className='listnsn'>            
             <p>hello Listnsn {}</p>
@@ -33,7 +35,7 @@ import { useAithsh } from "./AithshState";
                         <th>{item.PN}</th>
                         <th>{item.Name}</th>
                         <th>{item.Quantity}</th>
-                        <th><input type='number' name={item.Name} id={item.AID} ao={item.NameID} defaultValue={aithsh.find(({aid})=>aid===item.AID)?Object.values(aithsh.find(({aid})=>aid===item.AID))[1]:'0'} onChange={handleChange} min='0' max={`${item.Quantity}`}/></th>
+                        <th><input type='number' name={item.Name} pn={item.PN} id={item.AID} ao={item.NameID} defaultValue={aithsh.find(({ao})=>ao===item.NameID)?Object.values(aithsh.find(({ao})=>ao===item.NameID))[1]:'0'} onChange={handleChange} min='0' max={`${item.Quantity}`}/></th>
                     </tr>)}
                 </tbody>
                 </table>
