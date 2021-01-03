@@ -1,17 +1,19 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import Listnsn from '../../../components/Listnsn'
+import Submenu from '../../../components/Submenu'
 
 function Imag({ imag, nsns }) {
 
   return (
+    <>
+    <Submenu />
     <main>
-
       <p>{imag.name}</p>
       <Image src={`/images/${imag.id}.jpg`} alt="me" width="500" height='500'  layout='intrinsic'/>
       <Listnsn details={nsns} />
-
     </main>
+    </>
   );
 }
 

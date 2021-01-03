@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Submenu from '../../../components/Submenu'
 
 function Assembly({ assembly }) {
 
@@ -12,15 +13,16 @@ function Assembly({ assembly }) {
   </Link></div>;
 
   return (
+    <>
+    <Submenu />
     <main>
-
       <p>{assembly.caption}</p>
       <p>Υποσυγκροτήματα: {assembly.menuItem.length ? assembly.menuItem.length : `1`}</p>
       <div className='cards-wrapper'>
         {listItems}
       </div>
-
     </main>
+    </>
   );
 }
 

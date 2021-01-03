@@ -1,4 +1,3 @@
-import { Children } from 'react';
 import Meta from '../components/meta.js'
 
 function layout({children}) {
@@ -7,7 +6,7 @@ function layout({children}) {
         <Meta />
         <header className='header'>
             <p>this is header</p>
-            <nav className='nav'>nav</nav>
+            <nav className='nav'>MAIN NAV</nav>
         </header>
         <div className='container'>
             {children}

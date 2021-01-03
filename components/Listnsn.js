@@ -1,6 +1,6 @@
 import { useAithsh } from "./AithshState";
 
- function Listnsn({details}) {
+function Listnsn({details}) {
 
     const {aithsh, handleAithsh} = useAithsh();
     
@@ -22,8 +22,8 @@ import { useAithsh } from "./AithshState";
                     <th>Α/Α</th>
                     <th>Α/Ο</th>
                     <th>P/N</th>
-                    <th>ΟΝΟΜΑΣΙΑ</th>
-                    <th>ΜΕΓΙΣΤΗ ΠΟΣΟΤΗΤΑ</th>
+                    <th>ΠΕΡΙΓΡΑΦΗ</th>
+                    <th>ΠΛΗΘΟΣ</th>
                     <th>ΑΙΤΟΥΜΕΝΗ ΠΟΣΟΤΗΤΑ</th>
                 </tr>
                 </thead>
