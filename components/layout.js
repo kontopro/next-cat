@@ -1,12 +1,19 @@
 import Meta from '../components/meta.js'
+import Link from 'next/link';
 
 function layout({children}) {
     return (
         <>
         <Meta />
         <header className='header'>
-            <p>this is header</p>
-            <nav className='nav'>MAIN NAV</nav>
+            <div className='logo'><img src='/KEY.jpg' width='100' height='50'/></div>
+            <h1 className='title'>Ηλεκτρονικοί Κατάλογοι 2021</h1>
+            <nav className='nav'>
+                <ul>
+                    <Link href='/'>Αρχική</Link>
+                    <Link href='/assemblies'>Οχήματα</Link>
+                </ul>
+            </nav>
         </header>
         <div className='container'>
             {children}

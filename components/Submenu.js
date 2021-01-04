@@ -13,6 +13,9 @@ function submenu() {
                 <Link href='/assemblies'>
                     <a>Κύρια Συγκροτήματα</a>
                 </Link>
+                <Link href='/assemblies/search'>
+                    <a>Αναζήτηση</a>
+                </Link>
                 <button onClick={() => router.back()}>Πίσω</button>
                 </ul>
                 </nav>
