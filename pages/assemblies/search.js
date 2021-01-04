@@ -1,5 +1,5 @@
 
-import Submenu from '../components/Submenu'
+import Submenu from '../../components/Submenu'
 
 export default function Search() {
   return (
