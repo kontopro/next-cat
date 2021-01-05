@@ -10,10 +10,10 @@ function submenu() {
             <div className='left-menu'>
                 <nav>
                     <ul>
-                <Link href='/assemblies'>
+                <Link href='/m109'>
                     <a>Κύρια Συγκροτήματα</a>
                 </Link>
-                <Link href='/assemblies/search'>
+                <Link href='/m109/search'>
                     <a>Αναζήτηση</a>
                 </Link>
                 <button onClick={() => router.back()}>Πίσω</button>
@@ -23,7 +23,7 @@ function submenu() {
             <div className='right-menu'>
             <nav>
                     <ul>
-                <Link href='/assemblies/aithsh'>
+                <Link href='/m109/aithsh'>
                     <a>Αίτηση</a>
                 </Link>
                 </ul>

@@ -11,7 +11,7 @@ function layout({children}) {
             <nav className='nav'>
                 <ul>
                     <Link href='/'>Αρχική</Link>
-                    <Link href='/assemblies'>Οχήματα</Link>
+                    <Link href='/m109'>Οχήματα</Link>
                 </ul>
             </nav>
         </header>
