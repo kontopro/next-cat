@@ -7,7 +7,10 @@ function Assemblies({assemblies}) {
     <>
       <Submenu />
       <main className='assemblies'>
-        <h1>Κύρια Συγκροτήματα</h1>
+        <div className='page-title'>
+          <img  src='icon-gears.svg' width='35' height='35'/>
+          <h1>Κύρια Συγκροτήματα</h1>
+        </div>
         <div className='cards-wrapper'>
            {assemblies.map(item =>
               <div key={item.id} className='card'>
