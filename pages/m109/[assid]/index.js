@@ -28,7 +28,7 @@ function Assembly({ assembly }) {
 
 export const getStaticPaths = async () => {
 
-  const res = await fetch('https://raw.githubusercontent.com/kontopro/next-cat/main/data/master.json')
+  const res = await fetch('https://raw.githubusercontent.com/kontopro/next-cat/main/data/master-m109.json')
   const assemblies = await res.json()
 
   const paths = assemblies.map((assembly) => ({
@@ -43,7 +43,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({params}) => {
   
-  const res = await fetch('https://raw.githubusercontent.com/kontopro/next-cat/main/data/master.json')
+  const res = await fetch('https://raw.githubusercontent.com/kontopro/next-cat/main/data/master-m109.json')
   const assemblies = await res.json()
   const assembly = assemblies.find(({id}) => id === params.assid)
 
