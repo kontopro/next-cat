@@ -18,7 +18,7 @@ function Imag({ imag, nsns }) {
 
 export const getStaticPaths = async () => {
 
-  const res = await fetch('https://raw.githubusercontent.com/kontopro/next-cat/main/data/master.json')
+  const res = await fetch('https://raw.githubusercontent.com/kontopro/next-cat/main/data/master-m109.json')
   const assemblies = await res.json()
   const paths = assemblies.map((assembly) => assembly.menuItem.length?assembly.menuItem.map((item) => (
       { 
@@ -36,10 +36,10 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({params}) => {
   
-  const res1 = await fetch('https://raw.githubusercontent.com/kontopro/next-cat/main/data/detail.json')
+  const res1 = await fetch('https://raw.githubusercontent.com/kontopro/next-cat/main/data/detail-m109.json')
   const details = await res1.json()
   const nsns = details.filter(item => item.PictureNo === params.imgid)
-  const res = await fetch('https://raw.githubusercontent.com/kontopro/next-cat/main/data/master.json')
+  const res = await fetch('https://raw.githubusercontent.com/kontopro/next-cat/main/data/master-m109.json')
   const assemblies = await res.json()
   const assembly = assemblies.find(item => item.id === params.assid)
   const imag = assembly.menuItem.length?assembly.menuItem.find(item => item.id === params.imgid):assembly.menuItem

@@ -24,7 +24,7 @@ function Assemblies({assemblies}) {
 
 export const getStaticProps = async () => {
   
-  const res = await fetch('https://raw.githubusercontent.com/kontopro/next-cat/main/data/master.json')
+  const res = await fetch('https://raw.githubusercontent.com/kontopro/next-cat/main/data/master-m109.json')
   const assemblies = await res.json()
 
   return {
