@@ -11,7 +11,7 @@ function Assemblies({assemblies}) {
         <div className='cards-wrapper'>
            {assemblies.map(item =>
               <div key={item.id} className='card'>
-                <Link href={`/assemblies/${item.id}`}>
+                <Link href={`/m109/${item.id}`}>
                   <a>{item.caption}</a>
                 </Link>
               </div>
