@@ -9,7 +9,7 @@ function Imag({ imag, nsns }) {
     <Submenu />
     <main>
       <p>{imag.name}</p>
-      <img src={`/images/${imag.id}.jpg`} alt="me" width="500" height='500' />
+      <img src={`/images-m109/${imag.id}.jpg`} alt="me" width="500" height='500' />
       <Listnsn details={nsns} />
     </main>
     </>
