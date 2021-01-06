@@ -10,24 +10,31 @@ function submenu() {
             <div className='left-menu'>
                 <nav>
                     <ul>
-                <Link href='/m109'>
-                    <a>Κύρια Συγκροτήματα</a>
-                </Link>
-                <Link href='/m109/search'>
-                    <a>Αναζήτηση</a>
-                </Link>
-                <button onClick={() => router.back()}>Πίσω</button>
-                </ul>
+                        <li>
+                        <Link href='/m109'>
+                            <a>Κύρια Συγκροτήματα</a>
+                        </Link>
+                        </li>
+                        <li>
+                        <Link href='/m109/search'>
+                            <a>Αναζήτηση</a>
+                        </Link>
+                        </li>
+                    </ul>
                 </nav>
+
+            </div>
+            <div className='center-menu'>
+                <button onClick={() => router.back()}>&#171;</button>
             </div>
             <div className='right-menu'>
-            <nav>
+                <nav>
                     <ul>
-                <Link href='/m109/aithsh'>
-                    <a>Αίτηση</a>
-                </Link>
-                </ul>
-            </nav>
+                        <Link href='/m109/aithsh'>
+                            <button>Αίτηση</button>
+                        </Link>
+                    </ul>
+                </nav>
             </div>
         </div>
     );

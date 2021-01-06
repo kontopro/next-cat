@@ -7,13 +7,15 @@ function Imag({ imag, nsns }) {
   return (
     <>
     <Submenu />
-    <main>
+    <main className='imgid'>
       <p>{imag.name}</p>
-      <img src={`/images-m109/${imag.id}.jpg`} alt="me" width="500" height='500' />
+      <p>
+      <img src={`/images-m109/${imag.id}.jpg`} alt="me" width="500" height='auto' />
+      </p>
       <Listnsn details={nsns} />
     </main>
     </>
-  );
+);
 }
 
 export const getStaticPaths = async () => {

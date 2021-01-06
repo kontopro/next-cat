@@ -16,12 +16,26 @@ function layout({children}) {
             </div>
             <nav className='nav btm-header'>
                 <ul>
+                    <li>
                     <Link href='/'>Αρχική</Link>
-                    <Link href='/m109'>Οχήματα</Link>
-                    <Link href='/m109'>Άρματα Μάχης</Link>
-                    <Link href='/m109'>Πυροβόλα</Link>
-                    <Link href='/m109'>Οπλισμός</Link>
+                    </li>
+                    <li className='no-mobile'>
+                    <Link  href='/m109'>Οχήματα</Link>
+                    </li>
+                    <li className='no-mobile'>
+                    <Link  href='/m109'>Άρματα Μάχης</Link>
+                    </li>
+                    <li className='no-mobile'>
+                    <Link  href='/m109'>Πυροβόλα</Link>
+                    </li>
+                    <li className='no-mobile'>
+                    <Link  href='/m109'>Οπλισμός</Link>
+                    </li>
                 </ul>
+
+
+
+
             </nav>
         </header>
         <div className='container'>

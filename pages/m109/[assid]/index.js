@@ -17,7 +17,7 @@ function Assembly({ assembly }) {
     <Submenu />
     <main>
       <p>{assembly.caption}</p>
-      <p>Υποσυγκροτήματα: {assembly.menuItem.length ? assembly.menuItem.length : `1`}</p>
+      <p> &nbsp;(Υποσυγκροτήματα: {assembly.menuItem.length ? assembly.menuItem.length : `1`})</p>
       <div className='cards-wrapper'>
         {listItems}
       </div>
