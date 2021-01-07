@@ -313,6 +313,27 @@ a {
   align-content: center;
   justify-items: center;
 }
+main table{
+  margin-top: 10px;
+  width: 100%;
+  border: 1px solid whitesmoke;
+  overflow-x: auto;
+}
+main table thead>tr{
+  background-color: gray;
+}
+main table tr>th {
+  font-weight: 400;
+}
+
+main table thead>tr>th {
+  font-weight: 600;
+  color: khaki
+}
+main table tr:nth-child(even) {
+  background-color: #eee;
+}
+
 .container>main>.listnsn>form>table {
   width: 100%;
   border: 1px solid whitesmoke;
