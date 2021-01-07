@@ -232,6 +232,9 @@ a {
   align-items: center;
 }
 
+.container>main.search{
+  flex-direction: column;
+}
 .container>main>.page-title{
   display:flex;
 }

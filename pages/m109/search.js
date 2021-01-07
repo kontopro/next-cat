@@ -1,13 +1,52 @@
 
+import { useState } from 'react'
+import Link from 'next/link';
 import Submenu from '../../components/Submenu'
+import details from '../../data/detail-m109.json'
 
 export default function Search() {
+
+  const [search, setSearch] = useState('')
+
+  const handleChange = (event) => {
+    event.preventDefault();
+    const curr = event.target.value;
+    setSearch(curr);
+  } 
+
+  console.log(search)
+ 
   return (
     <>
       <Submenu />
-    <main className='home'>
-      <p>search</p>
-    </main>
+      <main className='search'>
+        <p>Πληκτρολογείστε Α/Ο</p>
+        <form>
+          <input type='text' onChange={handleChange} name='ao'/>
+        </form>
+        <div>
+          {search.length>1?
+                <table>
+                <thead>
+                    <tr>
+                        <th>Α/Ο</th>
+                        <th>P/N</th>
+                        <th>ΠΕΡΙΓΡΑΦΗ</th>
+                        <th>ΥΠΟΣΥΓΚΡΟΤΗΜΑ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {details.filter(nsn => nsn.NameID.includes(search)).map(x => <tr key={x.AID}>
+                  <th>{x.NameID}</th>
+                  <th>{x.PN}</th>                  
+                  <th>{x.Name}</th>
+                  <th><Link href={`/m109/sub/${x.PictureNo}`}><a>{x.PictureNo} &#8618;</a></Link></th>
+                  </tr>)}
+                </tbody>
+                </table>
+:''}
+        </div>
+      </main>
     </>
   )
 }

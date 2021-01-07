@@ -1,14 +1,15 @@
 import Link from 'next/link';
 import Submenu from '../../../components/Submenu'
+import masters from '../../../data/master-m109.json'
 
 function Assembly({ assembly }) {
 
   const listItems = assembly.menuItem.length ? assembly.menuItem.map(item => <div key={item.id} className='card'>
-    <Link href={`/m109/${assembly.id}/${item.id}`}>
+    <Link href={`/m109/sub/${item.id}`}>
       <a>{item.caption}</a>
     </Link>
   </div>
-  ) : <div className='card'><Link href={`/m109/${assembly.id}/${assembly.menuItem.id}`}>
+  ) : <div className='card'><Link href={`/m109/sub/${assembly.menuItem.id}`}>
     <a>{assembly.menuItem.caption}</a>
   </Link></div>;
 
@@ -28,10 +29,7 @@ function Assembly({ assembly }) {
 
 export const getStaticPaths = async () => {
 
-  const res = await fetch('https://raw.githubusercontent.com/kontopro/next-cat/main/data/master-m109.json')
-  const assemblies = await res.json()
-
-  const paths = assemblies.map((assembly) => ({
+  const paths = masters.map((assembly) => ({
     params: { assid: assembly.id.toString() }
   }))
 
@@ -43,9 +41,7 @@ export const getStaticPaths = async () => {
 
 export const getStaticProps = async ({params}) => {
   
-  const res = await fetch('https://raw.githubusercontent.com/kontopro/next-cat/main/data/master-m109.json')
-  const assemblies = await res.json()
-  const assembly = assemblies.find(({id}) => id === params.assid)
+  const assembly = masters.find(({id}) => id === params.assid)
 
   return {
     props:{
