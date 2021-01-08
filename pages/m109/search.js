@@ -37,10 +37,10 @@ export default function Search() {
                 </thead>
                 <tbody>
                 {details.filter(nsn => nsn.NameID.includes(search)).map(x => <tr key={x.AID}>
-                  <th>{x.NameID}</th>
-                  <th>{x.PN}</th>                  
-                  <th>{x.Name}</th>
-                  <th><Link href={`/m109/sub/${x.PictureNo}`}><a>{x.PictureNo} &#8618;</a></Link></th>
+                  <td>{x.NameID}</td>
+                  <td>{x.PN}</td>                
+                  <td>{x.Name}</td>
+                  <td><Link href={`/m109/sub/${x.PictureNo}`}><a>{x.PictureNo} &#8618;</a></Link></td>
                   </tr>)}
                 </tbody>
                 </table>

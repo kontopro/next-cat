@@ -22,7 +22,6 @@ function submenu() {
                         </li>
                     </ul>
                 </nav>
-
             </div>
             <div className='center-menu'>
                 <button onClick={() => router.back()}>&#171;</button>

@@ -322,7 +322,7 @@ main table{
 main table thead>tr{
   background-color: gray;
 }
-main table tr>th {
+main table tr>td {
   font-weight: 400;
 }
 
@@ -335,22 +335,46 @@ main table tr:nth-child(even) {
 }
 
 .container>main>.listnsn>form>table {
-  width: 100%;
+  width: 90%;
   border: 1px solid whitesmoke;
-  overflow-x: auto;
+  overflow-x: scroll;
 }
 .container>main>.listnsn>form>table thead>tr {
   background-color: gray;
+  
 }
 .container>main>.listnsn>form>table thead>tr>th {
     font-weight: 600;
     color: khaki
 }
-.container>main>.listnsn>form>table tr>th {
+.container>main>.listnsn>form>table tr>td {
   font-weight: 400;
+  text-align: center;
 }
 .container>main>.listnsn>form>table tr:nth-child(even) {
   background-color: #eee;
+}
+
+main.aithsh table {
+  font-weight: 300;
+  width: 100%;
+  max-width: 980px;
+  overflow: scroll;
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+
+main.aithsh table tr>th{
+  border-top: 1px solid darkgray;
+}
+main.aithsh table tr>td,
+main.aithsh table tr>th{
+  background-color: #fff;
+  color: #000;
+  font-size: small;
+  border-bottom: 1px solid darkgray;
+  border-left: 1px solid darkgray;
+  text-align: center;
 }
 
 .card p {
@@ -396,4 +420,14 @@ footer:after{
     height: auto;
   }
 
+}
+
+@media print  {
+  .no-print, header, .sub-menu, footer  {
+    display:none !important;
+  }
+  @page {
+    size: A4 landscape;
+    margin: 20px auto;
+  }
 }

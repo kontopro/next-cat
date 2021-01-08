@@ -22,17 +22,17 @@ function Listnsn({details}) {
                             <th>ΠΕΡΙΓΡΑΦΗ</th>
                             <th>ΠΛΗΘΟΣ</th>
                             <th>ΑΙΤΟΥΜΕΝΗ ΠΟΣΟΤΗΤΑ</th>
-                        </tr>
+                        </tr>                        
                     </thead>
                     <tbody>
                         {details.map(item => 
                         <tr key={item.AID} className='nsn'> 
-                            <th>{item.RefNo}</th> 
-                            <th>{item.NameID}</th>
-                            <th>{item.PN}</th>
-                            <th>{item.Name}</th>
-                            <th>{item.Quantity}</th>
-                            <th><input type='number' name={item.Name} pn={item.PN} id={item.AID} ao={item.NameID} defaultValue={aithsh.find(({ao})=>ao===item.NameID)?Object.values(aithsh.find(({ao})=>ao===item.NameID))[1]:'0'} onChange={handleChange} min='0' max={`${item.Quantity}`}/></th>
+                            <td>{item.RefNo}</td> 
+                            <td>{item.NameID}</td>
+                            <td>{item.PN}</td>
+                            <td>{item.Name}</td>
+                            <td>{item.Quantity}</td>
+                            <td><input type='number' name={item.Name} pn={item.PN} id={item.AID} ao={item.NameID} defaultValue={aithsh.find(({ao})=>ao===item.NameID)?Object.values(aithsh.find(({ao})=>ao===item.NameID))[1]:'0'} onChange={handleChange} min='0' max={`${item.Quantity}`}/></td>
                         </tr>)}
                     </tbody>
                 </table>
