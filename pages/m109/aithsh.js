@@ -13,8 +13,14 @@ export default function Aithsh() {
         <div className='print'>
           <div className='print-title'>
             <h1>Αίτηση Μηχανογραφικώς Χορηγουμένων Υλικών</h1>
-          </div>        
-        <table>
+          </div> 
+          <table className='t1'>
+            <tr><td>ΑΙΤΟΥΣΑ ΜΟΝΑΔΑ</td><td>ΜΟΝΑΔΑ ΜΕΣΩ</td><td>ΔΓΗ ΧΟΡΗΓΗΣΗΣ</td><td>ΔΓΗ ΔΕΣΜΕΥΣΗΣ</td></tr>  
+            <tr><td></td><td>Η'</td><td></td><td></td></tr>  
+            <tr><td>ΧΟΡΗΓΟΥΣΑ ΜΟΝΑΔΑ</td><td>ΜΟΝΑΔΑ ΔΙΑ</td><td>ΚΩΔΙΚΑΣ ΔΓΗΣ</td><td>ΚΩΔΙΚΑΣ ΔΓΗΣ</td></tr>  
+            <tr><td></td><td></td><td></td><td></td></tr>  
+          </table>       
+          <table className='t2'>
           <thead>
             <tr>
               <th>ΚΩΔΙΚΑΣ ΕΝΤΥΠ.</th>
