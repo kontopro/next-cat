@@ -31,6 +31,10 @@ export default function Aithsh() {
               <th>ΠΑΡΑΤΗΡΗΣΕΙΣ</th>
             </tr>
           </thead>
+          {aithsh.length===0?<tbody>
+            <tr><td colSpan='12'>Δεν έχουν καταχωρηθεί υλικά στην αίτηση</td></tr>
+            
+          </tbody>:
           <tbody>    
           {aithsh.map(x=>
             <tr key={x.ao}>
@@ -48,9 +52,14 @@ export default function Aithsh() {
               <td> </td>
             </tr>
           )}
-          </tbody> 
+          </tbody>} 
           <tfoot>
-            <p>this is table's footer</p>
+            <tr>
+            <td colSpan='3' rowSpan='3'>ΥΠΟΓΡΑΦΗ ΑΙΤΟΥΝΤΟΣ ΚΑΙ ΣΦΡΑΓΙΔΑ ΜΟΝΑΔΑΣ</td>
+            <td colspan='3' rowSpan='3'>ΕΓΚΡΙΝΟΝΤΟΣ ΤΗΝ ΑΙΤΗΣΗ ΚΑΙ ΟΙΚΕΙΑ ΣΦΡΑΓΙΔΑ</td>
+            <td colspan='3' rowSpan='3'>ΥΠΟΓΡΑΦΗ ΚΩΔΙΚΟΠΟΙΗΣΗΣ ΥΠΑΛΛΗΛΟΥ</td>
+            <td colspan='3' rowSpan='3'>Υποβάλλεται υπό τύπου αναφοράς με τη Φ.600.14/.................................................................</td>
+            </tr>
           </tfoot>
           </table>
         </div>

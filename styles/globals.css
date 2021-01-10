@@ -355,28 +355,37 @@ main table tr:nth-child(even) {
   background-color: #eee;
 }
 
+main.aithsh table>tfoot>tr>td{
+  padding-top:5px;
+  text-align: start;
+  vertical-align: text-top;
+}
+main.aithsh table>tfoot>tr{
+  height: 100px;
+}
 main.aithsh table {
   font-weight: 300;
   width: 100%;
-  max-width: 980px;
+  max-width: 1080px;
   overflow: scroll;
   overflow-x: scroll;
   scroll-behavior: smooth;
 }
 
-main.aithsh table tr>th{
-  border-top: 1px solid darkgray;
-}
 main.aithsh table tr>td,
 main.aithsh table tr>th{
   background-color: #fff;
   color: #000;
   font-size: small;
-  border-bottom: 1px solid darkgray;
-  border-left: 1px solid darkgray;
   text-align: center;
 }
 
+main.aithsh table td,
+main.aithsh table th{  
+  border: 1px solid lightgray;
+  border-left: none;
+  border-top: none;
+}
 .card p {
   margin: 0;
   font-size: 1rem;
@@ -429,5 +438,9 @@ footer:after{
   @page {
     size: A4 landscape;
     margin: 20px auto;
+    border: none;
+  }
+  .print{
+    border:none;
   }
 }
