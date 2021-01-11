@@ -123,6 +123,7 @@ a {
   flex-wrap: wrap;
   background-color: white;  
   border: 1px solid rosybrown;
+  min-height: calc(100vh - 237px);
 }
 
 .container>.sub-menu ul{
@@ -232,7 +233,35 @@ a {
   align-items: center;
 }
 
-.container>main.search{
+.container>main.home>.cards-wrapper>.card{
+  max-width: 300px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 8px;
+}
+.container>main.home>.cards-wrapper>.card p{
+  text-align: center;
+}
+.container>main.home>.cards-wrapper>.card>.card-header{
+  flex:1;
+}
+.container>main.home>.cards-wrapper>.card>.card-image{
+  flex: 1;
+}
+.container>main.home>.cards-wrapper>.card>.card-image>p{
+  width: 100%;
+  height: auto;
+}
+.container>main.home>.cards-wrapper>.card>.card-image>p>img{
+  width:100%;
+}
+.container>main.home>.cards-wrapper>.card>.card-footer{
+  flex:1;
+  padding: 5px;
+}
+.container>main.search,
+.container>main.home{
   flex-direction: column;
 }
 .container>main>.page-title{

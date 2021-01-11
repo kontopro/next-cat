@@ -1,4 +1,3 @@
-
 import { useState } from 'react'
 import Link from 'next/link';
 import Submenu from '../../components/Submenu'
@@ -25,7 +24,7 @@ export default function Search() {
           <input type='text' onChange={handleChange} name='ao'/>
         </form>
         <div>
-          {search.length>1?
+          {search.length>3?
                 <table>
                 <thead>
                     <tr>

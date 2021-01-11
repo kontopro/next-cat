@@ -20,16 +20,16 @@ function layout({children}) {
                     <Link href='/'>Αρχική</Link>
                     </li>
                     <li className='no-mobile'>
-                    <Link  href='/m109'>Οχήματα</Link>
+                    <Link  href='/oxhmata'>Οχήματα</Link>
                     </li>
                     <li className='no-mobile'>
-                    <Link  href='/m109'>Άρματα Μάχης</Link>
+                    <Link  href='/armata'>Άρματα Μάχης</Link>
                     </li>
                     <li className='no-mobile'>
-                    <Link  href='/m109'>Πυροβόλα</Link>
+                    <Link  href='/pirovola'>Πυροβόλα</Link>
                     </li>
                     <li className='no-mobile'>
-                    <Link  href='/m109'>Οπλισμός</Link>
+                    <Link  href='/oplismos'>Οπλισμός</Link>
                     </li>
                 </ul>
 
