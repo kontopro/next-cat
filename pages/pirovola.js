@@ -8,7 +8,7 @@ export default function Home() {
         <div className='cards-wrapper'>
         <div className='card'>
           <div className='card-image'>
-          <p><img src='images-m109/000.jpg'/></p>
+          <p><img src='/new-cat/images-m109/000.jpg'/></p>
           </div>
           <div className='card-footer'>
           <p>M109</p>

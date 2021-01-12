@@ -9,7 +9,7 @@ function Assemblies({assemblies}) {
       <Submenu />
       <main className='assemblies'>
         <div className='page-title'>
-          <img  src='icon-gears.svg' width='35' height='35'/>
+          <img  src='/new-cat/icon-gears.svg' width='35' height='35'/>
           <h1>Κύρια Συγκροτήματα</h1>
         </div>
         <div className='cards-wrapper'>
@@ -28,8 +28,6 @@ function Assemblies({assemblies}) {
 
 export const getStaticProps = async () => {
   
-  
-
   return {
     props:{
         assemblies

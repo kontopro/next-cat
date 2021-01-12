@@ -8,7 +8,7 @@ function layout({children}) {
         <header className='header'>
             <div className='top-header'>
                 <div className='logo'>
-                    <p><img src='/KEY.jpg' width='100' height='50'/></p>
+                    <p><img src='/new-cat/KEY.jpg' width='100' height='50'/></p>
                 </div>
                 <div className='site-title'>
                     <h1 className='title'>Ηλεκτρονικοί Κατάλογοι</h1>

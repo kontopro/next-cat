@@ -127,10 +127,6 @@ a {
   border: 1px solid rosybrown;
   min-height: calc(100vh - 237px);
 }
-
-.container>.sub-menu ul{
-  margin:0;
-}
 .container>.sub-menu{
   width:100%;
   max-width:100%;
@@ -145,6 +141,10 @@ a {
   background-color: white;
   border-bottom: 2px solid whitesmoke;
   color: darkslategrey;
+}
+
+.container>.sub-menu ul{
+  margin:0;
 }
 
 .container>.sub-menu>.left-menu{
@@ -228,7 +228,7 @@ a {
   align-items: center;
 } 
 .container>main {  
-  min-height: 370px;
+  min-height: 415px;
   width: 100%;
   max-width:100%;
   margin: 10px auto;

@@ -14,7 +14,7 @@ function Sub({ nsns, imag }) {
     <main className='imgid'>
       <p>{imag.name}</p>
       <p>
-      <img src={`/images-m109/${nsns[0].PictureNo}.jpg`} alt="assemblie" width="500" height='auto' />
+      <img src={`/new-cat/images-m109/${nsns[0].PictureNo}.jpg`} alt="assemblie" width="500" height='auto' />
       </p>
       <Listnsn details={nsns} />
     </main>
