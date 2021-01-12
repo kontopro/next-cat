@@ -1,5 +1,6 @@
 import { useAithsh } from "../../components/AithshState";
 import Submenu from '../../components/Submenu'
+import Barcode from 'react-barcode'
 
 export default function Aithsh() {
 
@@ -57,7 +58,7 @@ export default function Aithsh() {
               <td> </td>
               <td> </td>
               <td> </td>
-              <td> </td>
+              <td><Barcode width={1} height={30} displayValue={false} value={`${x.ao} ${x.pos}`} /> </td>
             </tr>
           )}
           </tbody>} 
