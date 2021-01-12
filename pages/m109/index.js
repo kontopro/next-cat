@@ -9,7 +9,7 @@ function Assemblies({assemblies}) {
       <Submenu />
       <main className='assemblies'>
         <div className='page-title'>
-          <img  src='/new-cat/icon-gears.svg' width='35' height='35'/>
+          <img  src='/new-cat/icon-gears.jpg' width='35' height='35'/>
           <h1>Κύρια Συγκροτήματα</h1>
         </div>
         <div className='cards-wrapper'>
