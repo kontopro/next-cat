@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Submenu from '../../components/Submenu'
+import assemblies from '../../data/master-m109.json'
 
 function Assemblies({assemblies}) {
 
@@ -27,8 +28,7 @@ function Assemblies({assemblies}) {
 
 export const getStaticProps = async () => {
   
-  const res = await fetch('https://raw.githubusercontent.com/kontopro/next-cat/main/data/master-m109.json')
-  const assemblies = await res.json()
+  
 
   return {
     props:{
