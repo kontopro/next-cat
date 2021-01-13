@@ -6,6 +6,7 @@ import {useRouter} from 'next/router';
 function Assemblies({assemblies}) {
 
   const {basePath}  = useRouter();
+  console.log(__dirname)
 
   return (
     <>
