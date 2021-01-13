@@ -3,10 +3,11 @@ import Submenu from '../../../components/Submenu'
 import Listnsn from '../../../components/Listnsn'
 import masters from '../../../data/master-m109.json'
 import details from '../../../data/detail-m109.json'
+import {useRouter} from 'next/router';
 
 function Sub({ nsns, imag }) {
 
-    console.log(imag)
+  const {basePath}  = useRouter();
 
   return (
     <>
@@ -14,7 +15,7 @@ function Sub({ nsns, imag }) {
     <main className='imgid'>
       <p>{imag.name}</p>
       <p>
-      <img src={`/new-cat/images-m109/${nsns[0].PictureNo}.jpg`} alt="assemblie" width="500" height='auto' />
+      <img src={`${basePath}/images-m109/${nsns[0].PictureNo}.jpg`} alt="assemblie" width="500" height='auto' />
       </p>
       <Listnsn details={nsns} />
     </main>

@@ -4,14 +4,18 @@ import masters from '../../../data/master-m109.json'
 
 function Assembly({ assembly }) {
 
-  const listItems = assembly.menuItem.length ? assembly.menuItem.map(item => <div key={item.id} className='card'>
-    <Link href={`/m109/sub/${item.id}`}>
-      <a>{item.caption}</a>
-    </Link>
+  const listItems = assembly.menuItem.length ? assembly.menuItem.map(item => 
+    <Link href={`/m109/sub/${item.id}`} key={item.id} >
+      <div  className='card'>
+      <p>{item.caption}</p>
   </div>
-  ) : <div className='card'><Link href={`/m109/sub/${assembly.menuItem.id}`}>
+    </Link>
+  ) : 
+    <Link href={`/m109/sub/${assembly.menuItem.id}`} key={assembly.id}>
+  <div className='card'>
     <a>{assembly.menuItem.caption}</a>
-  </Link></div>;
+  </div>
+  </Link>;
 
   return (
     <>

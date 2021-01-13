@@ -1,14 +1,18 @@
 import Meta from '../components/meta.js'
 import Link from 'next/link';
+import {useRouter} from 'next/router';
 
 function layout({children}) {
+
+    const {basePath}  = useRouter();
+
     return (
         <>
         <Meta />
         <header className='header'>
             <div className='top-header'>
                 <div className='logo'>
-                    <p><img src='/new-cat/KEY.jpg' width='100' height='50'/></p>
+                    <p><img src={`${basePath}/KEY.jpg`} width='100' height='50'/></p>
                 </div>
                 <div className='site-title'>
                     <h1 className='title'>Ηλεκτρονικοί Κατάλογοι</h1>
@@ -32,10 +36,6 @@ function layout({children}) {
                     <Link  href='/oplismos'>Οπλισμός</Link>
                     </li>
                 </ul>
-
-
-
-
             </nav>
         </header>
         <div className='container'>
