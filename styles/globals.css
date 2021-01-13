@@ -6,6 +6,7 @@ body {
   margin: 0 auto;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+      min-height: 100vh;
 }
 
 a {
@@ -125,13 +126,13 @@ a {
   flex-wrap: wrap;
   background-color: white;  
   border: 1px solid rosybrown;
-  min-height: calc(100vh - 240px);
 }
 .container>.sub-menu{
   width:100%;
   max-width:100%;
   height: 40px;
   margin-top: 0;
+  top:0;
   display: flex;
   justify-content: center;
   align-content: center;
