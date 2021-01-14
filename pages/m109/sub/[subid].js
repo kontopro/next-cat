@@ -8,6 +8,8 @@ import {useRouter} from 'next/router';
 function Sub({ nsns, imag }) {
 
   const {basePath}  = useRouter();
+  const ky = useRouter();
+  console.log(ky)
 
   return (
     <>

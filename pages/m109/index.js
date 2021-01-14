@@ -6,7 +6,8 @@ import {useRouter} from 'next/router';
 function Assemblies({assemblies}) {
 
   const {basePath}  = useRouter();
-  console.log(__dirname)
+  const ky = useRouter().pathname.substr(1, );
+  console.log(ky)
 
   return (
     <>
@@ -18,7 +19,7 @@ function Assemblies({assemblies}) {
         </div>
         <div className='cards-wrapper'>
            {assemblies.map(item =>
-                <Link href={`/m109/${item.id}`} key={item.id}>
+                <Link href={`/${ky}/${item.id}`} key={item.id}>
               <div  className='card'>
                   <a>{item.caption}</a>
               </div>
