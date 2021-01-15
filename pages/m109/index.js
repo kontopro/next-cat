@@ -6,7 +6,12 @@ import {useRouter} from 'next/router';
 function Assemblies({assemblies}) {
 
   const {basePath}  = useRouter();
-  console.log(__dirname)
+
+  // Βρίσκω το μήκος του Κυρίου Υλικού
+  const lr = useRouter().asPath.lastIndexOf('/')-1
+
+  // Βρίσκω το ΚΥ, πχ m109, ms290, κλπ
+  const ky = useRouter().asPath.substr(1,lr)
 
   return (
     <>
@@ -18,7 +23,7 @@ function Assemblies({assemblies}) {
         </div>
         <div className='cards-wrapper'>
            {assemblies.map(item =>
-                <Link href={`/m109/${item.id}`} key={item.id}>
+                <Link href={`/${ky}/${item.id}`} key={item.id}>
               <div  className='card'>
                   <a>{item.caption}</a>
               </div>

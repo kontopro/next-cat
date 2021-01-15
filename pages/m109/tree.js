@@ -8,6 +8,12 @@ function Assemblies() {
 
   const {basePath}  = useRouter();
 
+  // Βρίσκω το μήκος του Κυρίου Υλικού
+  const lr = useRouter().asPath.lastIndexOf('/tree/')-1
+
+  // Βρίσκω το ΚΥ, πχ m109, ms290, κλπ
+  const ky = useRouter().asPath.substr(1,lr)
+
   return (
     <>
       <Submenu />
@@ -17,13 +23,20 @@ function Assemblies() {
           <h1>Κύρια Συγκροτήματα</h1>
         </div>
         <div className='tree-left-wrapper'>
-           {assemblies.map(item =>
-                <div  className='tree-master' key={item.id} >
-                  <a>{item.caption}</a>
+           {assemblies.map(master =>
+                <div  className='tree-master' key={master.id} >
+                  <a>{master.caption}</a>
                   {/* toDo */}
                   {/* για κάθε κύριο συγκρότημα από κάτω τα υπο-συγκροτήματα */}
-
-              </div>
+                  {master.menuItem.length?
+                    master.menuItem.map(detail=>
+                      <div className='tree-detail' key={detail.id}>
+                        <p>{detail.caption}</p>
+                      </div>):
+                      <div className='tree-detail' key={master.menuItem.id}>
+                        <p>{master.menuItem.caption}</p>
+                      </div>}
+                </div>
             )}
         </div>
       </main>

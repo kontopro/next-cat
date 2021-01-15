@@ -7,6 +7,12 @@ import {useRouter} from 'next/router';
 
 function Sub({ nsns, imag }) {
 
+  // Βρίσκω το μήκος του Κυρίου Υλικού
+  const lr = useRouter().asPath.lastIndexOf('/sub/')-1
+
+  // Βρίσκω το ΚΥ, πχ m109, ms290, κλπ
+  const ky = useRouter().asPath.substr(1,lr)
+
   const {basePath}  = useRouter();
 
   return (
@@ -15,7 +21,7 @@ function Sub({ nsns, imag }) {
     <main className='imgid'>
       <p>{imag.name}</p>
       <p>
-      <img src={`${basePath}/images-m109/${nsns[0].PictureNo}.jpg`} alt="assemblie" width="500" height='auto' />
+      <img src={`${basePath}/images-${ky}/${nsns[0].PictureNo}.jpg`} alt="assemblie" width="500" height='auto' />
       </p>
       <Listnsn details={nsns} />
     </main>

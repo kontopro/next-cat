@@ -2,7 +2,7 @@ import { useAithsh } from "../../components/AithshState";
 import Submenu from '../../components/Submenu'
 import Barcode from 'react-barcode'
 
-export default function Aithsh() {
+export default function Aithsh() {  
 
   const {aithsh, handleAithsh} = useAithsh();
 
