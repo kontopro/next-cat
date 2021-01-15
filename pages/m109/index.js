@@ -1,17 +1,18 @@
 import Link from 'next/link';
 import Submenu from '../../components/Submenu'
-import assemblies from '../../data/master-m109.json'
+import assemblies from './data/master.json'
+import {kyrio} from './kyrio.js'
 import {useRouter} from 'next/router';
 
-function Assemblies({assemblies}) {
+function Assemblies() {
 
   const {basePath}  = useRouter();
 
   // Βρίσκω το μήκος του Κυρίου Υλικού
-  const lr = useRouter().asPath.lastIndexOf('/')-1
+  // const lr = useRouter().asPath.lastIndexOf('/')-1
 
   // Βρίσκω το ΚΥ, πχ m109, ms290, κλπ
-  const ky = useRouter().asPath.substr(1,lr)
+  // const ky = useRouter().asPath.substr(1,lr)
 
   return (
     <>
@@ -23,7 +24,7 @@ function Assemblies({assemblies}) {
         </div>
         <div className='cards-wrapper'>
            {assemblies.map(item =>
-                <Link href={`/${ky}/${item.id}`} key={item.id}>
+                <Link href={`/${kyrio}/${item.id}`} key={item.id}>
               <div  className='card'>
                   <a>{item.caption}</a>
               </div>
@@ -33,15 +34,6 @@ function Assemblies({assemblies}) {
       </main>
     </>
   )
-}
-
-export const getStaticProps = async () => {
-  
-  return {
-    props:{
-        assemblies
-    }
-  }
 }
 
 export default Assemblies

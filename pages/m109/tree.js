@@ -1,18 +1,13 @@
 import Link from 'next/link';
 import Submenu from '../../components/Submenu'
-import assemblies from '../../data/master-m109.json'
-import details from '../../data/detail-m109.json'
+import {kyrio} from './kyrio.js'
+import assemblies from './data/master.json'
+import details from './data/detail.json'
 import {useRouter} from 'next/router';
 
 function Assemblies() {
 
   const {basePath}  = useRouter();
-
-  // Βρίσκω το μήκος του Κυρίου Υλικού
-  const lr = useRouter().asPath.lastIndexOf('/tree/')-1
-
-  // Βρίσκω το ΚΥ, πχ m109, ms290, κλπ
-  const ky = useRouter().asPath.substr(1,lr)
 
   return (
     <>

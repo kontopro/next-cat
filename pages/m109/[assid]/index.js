@@ -1,33 +1,28 @@
 import Link from 'next/link';
 import Submenu from '../../../components/Submenu'
-import masters from '../../../data/master-m109.json'
-import {useRouter} from 'next/router';
+import masters from '../data/master.json'
+import {kyrio} from '../kyrio.js'
+// import {useRouter} from 'next/router';
 
 function Assembly({ assembly }) {
 
 // Παίρνω το σημείο της τελευταίας καθέτου/
-const ews = useRouter().asPath.lastIndexOf('/')-1
+// const ews = useRouter().asPath.lastIndexOf('/')-1
 // Παίρνω το υπόλοιπο στρινκ
-const str = useRouter().asPath.substr(0,ews)
+// const str = useRouter().asPath.substr(0,ews)
 // Βρίσκω το μήκος του Κυρίου Υλικού
-const lr = str.lastIndexOf('/')-1
-
+// const lr = str.lastIndexOf('/')-1
 // Βρίσκω το ΚΥ, πχ m109, ms290, κλπ
-const ky = useRouter().asPath.substr(1,lr)
-
-// console.log(useRouter().asPath.substr(1,).indexOf('/'))
-console.log(ky)
-
-
+// const ky = useRouter().asPath.substr(1,lr)
 
   const listItems = assembly.menuItem.length ? assembly.menuItem.map(item => 
-    <Link href={`/${ky}/sub/${item.id}`} key={item.id}  >
+    <Link href={`/${kyrio}/sub/${item.id}`} key={item.id}  >
       <div  className='card'>
       <p>{item.caption}</p>
   </div>
     </Link>
   ) : 
-    <Link href={`/${ky}/sub/${assembly.menuItem.id}`} key={assembly.id}  >
+    <Link href={`/${kyrio}/sub/${assembly.menuItem.id}`} key={assembly.id}  >
   <div className='card'>
     <a>{assembly.menuItem.caption}</a>
   </div>
