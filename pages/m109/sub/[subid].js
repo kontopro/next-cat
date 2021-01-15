@@ -12,7 +12,7 @@ function Sub({ nsns, imag }) {
 
   return (
     <>
-    <Submenu />
+    <Submenu kyrio={kyrio} />
     <main className='imgid'>
       <p>{imag.name}</p>
       <p>

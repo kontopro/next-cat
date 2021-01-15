@@ -16,7 +16,7 @@ export default function Search() {
  
   return (
     <>
-      <Submenu />
+      <Submenu kyrio={kyrio} />
       <main className='search'>
         <p>Πληκτρολογείστε Α/Ο</p>
         <form>

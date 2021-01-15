@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 
-function submenu() {
+function submenu({kyrio}) {
 
     const router = useRouter()
 
@@ -11,12 +11,12 @@ function submenu() {
                 <nav>
                     <ul>
                         <li>
-                        <Link href='/m109'>
+                        <Link href={`/${kyrio}`}>
                             <a>Κύρια Συγκροτήματα</a>
                         </Link>
                         </li>
                         <li>
-                        <Link href='/m109/search'>
+                        <Link href={`/${kyrio}/search`}>
                             <a>Αναζήτηση</a>
                         </Link>
                         </li>
@@ -29,7 +29,7 @@ function submenu() {
             <div className='right-menu'>
                 <nav>
                     <ul>
-                        <Link href='/m109/aithsh'>
+                        <Link href={`/${kyrio}/aithsh`}>
                             <button>Αίτηση</button>
                         </Link>
                     </ul>

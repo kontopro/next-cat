@@ -16,7 +16,7 @@ function Assemblies() {
 
   return (
     <>
-      <Submenu />
+      <Submenu kyrio={kyrio} />
       <main className='assemblies'>
         <div className='page-title'>
           <img  src={`${basePath}/icon-gears.jpg`} width='35' height='35'/>

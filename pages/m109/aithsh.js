@@ -1,6 +1,7 @@
 import { useAithsh } from "../../components/AithshState";
 import Submenu from '../../components/Submenu'
 import Barcode from 'react-barcode'
+import {kyrio} from './kyrio.js'
 
 export default function Aithsh() {  
 
@@ -8,7 +9,7 @@ export default function Aithsh() {
 
   return (
     <>
-      <Submenu />
+      <Submenu kyrio={kyrio} />
       <main className='aithsh'>
         <div className='print'>
           <div className='print-title'>

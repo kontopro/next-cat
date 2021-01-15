@@ -6,15 +6,6 @@ import {kyrio} from '../kyrio.js'
 
 function Assembly({ assembly }) {
 
-// Παίρνω το σημείο της τελευταίας καθέτου/
-// const ews = useRouter().asPath.lastIndexOf('/')-1
-// Παίρνω το υπόλοιπο στρινκ
-// const str = useRouter().asPath.substr(0,ews)
-// Βρίσκω το μήκος του Κυρίου Υλικού
-// const lr = str.lastIndexOf('/')-1
-// Βρίσκω το ΚΥ, πχ m109, ms290, κλπ
-// const ky = useRouter().asPath.substr(1,lr)
-
   const listItems = assembly.menuItem.length ? assembly.menuItem.map(item => 
     <Link href={`/${kyrio}/sub/${item.id}`} key={item.id}  >
       <div  className='card'>
@@ -30,7 +21,7 @@ function Assembly({ assembly }) {
 
   return (
     <>
-    <Submenu />
+    <Submenu kyrio={kyrio} />
     <main>
       <p>{assembly.caption}</p>
       <p> &nbsp;(Υποσυγκροτήματα: {assembly.menuItem.length ? assembly.menuItem.length : `1`})</p>
