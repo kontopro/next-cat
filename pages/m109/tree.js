@@ -49,5 +49,4 @@ function Assemblies() {
   )
 }
 
-
 export default Assemblies
