@@ -14,8 +14,6 @@ function Sub({ nsns, imag }) {
   const ky = useRouter().asPath.substr(1,lr)
 
   const {basePath}  = useRouter();
-  const ky = useRouter();
-  console.log(ky)
 
   return (
     <>
