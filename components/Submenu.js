@@ -16,6 +16,11 @@ function submenu({kyrio}) {
                         </Link>
                         </li>
                         <li>
+                        <Link href={`/${kyrio}/tree`}>
+                            <a>Δενδρική Μορφή</a>
+                        </Link>
+                        </li>
+                        <li>
                         <Link href={`/${kyrio}/search`}>
                             <a>Αναζήτηση</a>
                         </Link>

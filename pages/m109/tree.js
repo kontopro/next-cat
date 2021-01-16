@@ -23,7 +23,7 @@ function Tree() {
       <Submenu kyrio={kyrio} />
       <main className='tree'>
         <div className='page-title'>
-          <img  src={`${basePath}/tree2.png`} width='35' height='35'/>
+          <img  src={`${basePath}/tree3.png`} width='35' height='35'/>
           <h1>Δενδρική Μορφή</h1>
         </div>
         <div className='tree-wrapper'>
@@ -46,11 +46,13 @@ function Tree() {
           </div>
           <div className='tree-right-wrapper'>
                         <div className='tree-img'>
-                          <p>
-                           {/* {kyrioImg} */}
-                            {/* <img src={`${basePath}/images-${kyrio}/${pic[0].PictureNo}.jpg`} alt="assemblie" width="500" height='auto' /> */}
+                          <p>{pic.length?                           
+                            <img src={`${basePath}/images-${kyrio}/${pic[0].PictureNo}.jpg`} alt="assemblie" width="400" height='auto' />
+                            :<img src={`${basePath}/images-${kyrio}/000.jpg`} alt="assemblie" width="500" height='auto' />}
                           </p>
-                          <Listnsn details={pic} />
+                          {pic.length?                           
+                            <Listnsn details={pic} />:
+                            ''}
                         </div>
           </div>
         </div>

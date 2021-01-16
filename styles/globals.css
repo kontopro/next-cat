@@ -19,6 +19,9 @@ a {
   box-sizing: border-box;
 }
 
+p{
+  text-align: center;
+}
 
 .header{
   color: white;
@@ -268,6 +271,8 @@ a {
 .container>main.tree>.tree-wrapper>.tree-left-wrapper{
   /* border:1px solid red;   */
   width: 500px;
+  height: 500px;
+  overflow-y: scroll;
   padding-left: 1rem;
 }
 .container>main.tree>.tree-wrapper>.tree-left-wrapper>.tree-master{
@@ -337,6 +342,7 @@ a {
 
 .container>main>.page-title{
   display:flex;
+  margin: 25px 0;
 }
 
 .container>main>.page-title>img{
@@ -420,6 +426,7 @@ a {
 main table{
   margin-top: 10px;
   width: 100%;
+  max-width: 1100px;
   border: 1px solid whitesmoke;
   overflow-x: auto;
 }
@@ -436,6 +443,7 @@ main table thead>tr>th {
   font-weight: 600;
   color: khaki
 }
+
 main table tr:nth-child(even) {
   background-color: #eee;
 }
@@ -445,6 +453,7 @@ main table tr:nth-child(even) {
   border: 1px solid whitesmoke;
   overflow-x: scroll;
 }
+
 .container>main>.listnsn>form>table thead>tr {
   background-color: gray;
   
@@ -453,13 +462,23 @@ main table tr:nth-child(even) {
     font-weight: 600;
     color: khaki
 }
+
 .container>main>.listnsn>form>table tr>td {
   font-weight: 400;
   text-align: center;
 }
+
 .container>main>.listnsn>form>table tr:nth-child(even) {
   background-color: #eee;
 }
+
+main.aithsh>.print{
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 main.aithsh>.print>.print-title{
     text-align: center;
 }
@@ -528,7 +547,6 @@ footer:after{
   width: 100%;
   background: linear-gradient(2deg,rgb(230, 102, 102),#ffe742 50%, rgb(46, 175, 218));
 }
-
 
 @media (max-width: 800px) {
   .no-mobile {
