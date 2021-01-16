@@ -266,9 +266,9 @@ a {
 }
 
 .container>main.tree>.tree-wrapper>.tree-left-wrapper{
-  border:1px solid red;  
-  flex:1.5;
-  padding-left: 30px;
+  /* border:1px solid red;   */
+  width: 500px;
+  padding-left: 1rem;
 }
 .container>main.tree>.tree-wrapper>.tree-left-wrapper>.tree-master{
   margin-bottom: 8px;
@@ -286,11 +286,11 @@ a {
 .container>main.tree>.tree-wrapper>.tree-left-wrapper>.tree-master>.tree-detail{
   /* display: none; */
   cursor: pointer;
-  padding-left: 50px;
+  padding-left: 2rem;
 }
 
 .container>main.tree>.tree-wrapper>.tree-right-wrapper{
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   flex:2;
   display: flex;
   justify-content: center;

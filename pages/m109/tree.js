@@ -1,17 +1,22 @@
 import Submenu from '../../components/Submenu'
-import {kyrio} from './kyrio.js'
+import {kyrio, kyrioImg} from './kyrio.js'
 import assemblies from './data/master.json'
 import details from './data/detail.json'
 import {useRouter} from 'next/router';
 import {useState} from 'react'
 import Listnsn from '../../components/Listnsn';
 
-function Assemblies() {
+function Tree() {
 
   const {basePath}  = useRouter();
   const [pic, setPic] = useState([])
 
-  // const nsns = details.filter(item => item.PictureNo === params.subid)
+  function handleB(event) {
+   event.preventDefault();
+   const subid = event.target.getAttribute('picture')
+   const nsns = details.filter(item => item.PictureNo === subid)
+   setPic(nsns)
+  } 
 
   return (
     <>
@@ -31,17 +36,22 @@ function Assemblies() {
                     {master.menuItem.length?
                       master.menuItem.map(detail=>
                         <div className='tree-detail' key={detail.id}>
-                          <button>{detail.caption}</button>
+                          <button onClick={handleB} picture={detail.id}>{detail.caption}</button>
                         </div>):
                         <div className='tree-detail' key={master.menuItem.id}>
-                          <button>{master.menuItem.caption}</button>
+                          <button onClick={handleB} picture={master.menuItem.id}>{master.menuItem.caption}</button>
                         </div>}
                   </div>
               )}
           </div>
           <div className='tree-right-wrapper'>
-                        <div className='tree-img'></div>
-                        <Listnsn details={pic} />
+                        <div className='tree-img'>
+                          <p>
+                           {/* {kyrioImg} */}
+                            {/* <img src={`${basePath}/images-${kyrio}/${pic[0].PictureNo}.jpg`} alt="assemblie" width="500" height='auto' /> */}
+                          </p>
+                          <Listnsn details={pic} />
+                        </div>
           </div>
         </div>
       </main>
@@ -49,4 +59,4 @@ function Assemblies() {
   )
 }
 
-export default Assemblies
+export default Tree
