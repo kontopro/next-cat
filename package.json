@@ -1,6 +1,7 @@
 {
   "name": "next-cat",
   "version": "0.1.0",
+  "author": "P. Kontogiannis",
   "private": true,
   "scripts": {
     "dev": "next dev",
