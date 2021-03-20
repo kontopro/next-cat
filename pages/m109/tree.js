@@ -26,7 +26,7 @@ function Tree() {
           <img  src={`${basePath}/tree3.png`} width='35' height='35'/>
           <h1>Δενδρική Μορφή</h1>
         </div>
-        <div className='tree-wrapper'>
+        <div className='tree-wrapper' >
           <div className='tree-left-wrapper'>
             {assemblies.map(master =>
                   <div  className='tree-master' key={master.id} >
